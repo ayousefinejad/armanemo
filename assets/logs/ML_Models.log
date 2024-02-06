@@ -1,0 +1,46 @@
+2024-02-06 20:41:26,241 - INFO - 
+ Random Forest model 
+2024-02-06 20:41:27,829 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 20:41:27,829 - INFO - 
+ SVM model 
+2024-02-06 20:41:47,544 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 20:41:47,545 - INFO - 
+ CatBoost model 
+2024-02-06 20:42:43,675 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 20:47:13,726 - INFO - 
+ Random Forest model 
+2024-02-06 20:47:15,365 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 20:47:15,365 - INFO - 
+ SVM model 
+2024-02-06 20:47:34,769 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 20:47:34,769 - INFO - 
+ CatBoost model 
+2024-02-06 20:48:30,397 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 21:05:26,015 - INFO - 
+ Random Forest model 
+2024-02-06 21:05:27,586 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 21:05:27,586 - INFO - 
+ SVM model 
+2024-02-06 21:05:47,440 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 21:05:47,442 - INFO - 
+ CatBoost model 
+2024-02-06 21:06:43,569 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 21:08:32,558 - INFO - 
+ Random Forest model 
+2024-02-06 21:08:34,185 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 21:08:34,185 - INFO - 
+ SVM model 
+2024-02-06 21:08:54,140 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 21:08:54,140 - INFO - 
+ CatBoost model 
+2024-02-06 21:09:53,335 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 21:20:21,758 - INFO - 
+ Random Forest model 
+2024-02-06 21:21:41,597 - INFO - Best Parameters: {'criterion': 'gini', 'min_samples_split': 2, 'n_estimators': 100}
+2024-02-06 21:21:56,193 - INFO - Cross-validation results for Random Forest
+2024-02-06 21:21:56,194 - INFO - Mean Accuracy: 0.5451416885772714
+2024-02-06 21:21:56,194 - INFO - Mean Precision: 0.625816871389153
+2024-02-06 21:21:56,194 - INFO - Mean Recall: 0.509041863515702
+2024-02-06 21:21:56,194 - INFO - Mean F1: 0.5273210992006387
+2024-02-06 21:21:56,194 - INFO - 
+ SVM model 
