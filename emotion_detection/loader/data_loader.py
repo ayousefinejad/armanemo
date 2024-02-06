@@ -107,27 +107,23 @@ def create_data_loader(x, y, tokenizer, max_len, batch_size, label_list):
     return torch.utils.data.DataLoader(dataset, batch_size=batch_size)
 
 
-def split_data(df):
+def split_data(df, target_name):
     """
     Split the dataset into training, validation, and test sets, and prepare input features and labels.
 
     Args:
-        df (DataFrame): Pandas DataFrame containing columns 'emotion' and 'combined_text'.
+        df (DataFrame): Pandas DataFrame containing columns label and text.
 
     Returns:
         tuple: A tuple containing x_train, y_train, x_valid, y_valid, x_test, and y_test.
     """
-    labels_list = list(sorted(df['emotion'].unique()))
-    df['emotion_id'] = df['emotion'].apply(lambda t: labels_list.index(t))
+    labels_list = list(sorted(df[target_name].unique()))
+    df['label_id'] = df[target_name].apply(lambda t: labels_list.index(t))
 
-    train, test = train_test_split(df, test_size=0.1, random_state=1, stratify=df['emotion'])
+    train, test = train_test_split(df, test_size=0.1, random_state=1, stratify=df[target_name])
     train, valid = train_test_split(train, test_size=0.1, random_state=1, stratify=train['emotion'])
 
     train = train.reset_index(drop=True)
     valid = valid.reset_index(drop=True)
     test = test.reset_index(drop=True)
-
-    print(train.shape)
-    print(valid.shape)
-    print(test.shape)
     return train, valid, test

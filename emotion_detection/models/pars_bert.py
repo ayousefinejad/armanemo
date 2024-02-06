@@ -1,6 +1,8 @@
 import torch.nn as nn
 from transformers import BertModel
-
+from tqdm import tqdm
+import time
+import torch
 
 class TextClassificationParsBert(nn.Module):
     """
@@ -52,3 +54,58 @@ class TextClassificationParsBert(nn.Module):
         logits = self.classifier(pooled_output)
 
         return logits
+
+
+# Defining Training Process
+def train(dataloader):
+    model.train()
+    total_acc, total_count, total_loss = 0, 0, 0
+    log_interval = 500
+    start_time = time.time()
+
+    for batch_index, batch_data in enumerate(tqdm(dataloader)):
+        # Extract input features and labels from the batch_data dictionary
+        input_ids = batch_data['input_ids'].to('cuda:0')
+        attention_mask = batch_data['attention_mask'].to('cuda:0')
+        token_type_ids = batch_data['token_type_ids'].to('cuda:0')
+        targets = batch_data['targets'].to('cuda:0')
+
+        optimizer.zero_grad()
+        predicted_targets = model(input_ids, attention_mask, token_type_ids)
+        loss = criterion(predicted_targets, targets)
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 0.1)
+        optimizer.step()
+        total_acc += (predicted_targets.argmax(1) == targets).sum().item()
+        total_count += targets.size(0)
+        total_loss += loss.item()
+
+        if batch_index % log_interval == 0 and batch_index > 0:
+            elapsed = time.time() - start_time
+            print(
+                "| epoch {:3d} | {:5d}/{:5d} batches "
+                "| accuracy {:8.3f} | loss {:8.3f}".format(
+                    epoch, batch_index, len(dataloader), total_acc / total_count, total_loss
+                )
+            )
+            total_acc, total_count ,total_loss = 0, 0, 0
+            start_time = time.time()
+
+
+def evaluate(dataloader):
+  model.eval()
+  total_acc, total_count ,total_loss = 0, 0, 0
+
+  with torch.no_grad():
+    for batch_index, batch_data in enumerate(tqdm(dataloader)):
+        input_ids = batch_data['input_ids'].to('cuda:0')
+        attention_mask = batch_data['attention_mask'].to('cuda:0')
+        token_type_ids = batch_data['token_type_ids'].to('cuda:0')
+        targets = batch_data['targets'].to('cuda:0')
+
+        predicted_targets = model(input_ids, attention_mask, token_type_ids)
+        loss = criterion(predicted_targets, targets)
+        total_acc += (predicted_targets.argmax(1) == targets).sum().item()
+        total_count += targets.size(0)
+        total_loss += loss.item()
+  return total_acc / total_count, total_loss / len(dataloader)

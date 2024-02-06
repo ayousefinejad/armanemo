@@ -15,11 +15,14 @@ class BaseConfig:
     def __init__(self):
         self.parser = argparse.ArgumentParser()
 
-        self.parser.add_argument("--device", default="cpu",
+        self.parser.add_argument("--device", default="cuda:0",
                                  help="device to train models on it")
         
-        self.parser.add_argument("--model_name", default="/mnt/disk2/LanguageModels/mt5_large",
+        self.parser.add_argument("--parsbert_model", default="HooshvareLab/bert-fa-base-uncased",
                                  help="parsbert model pretrained")
+        
+        self.parser.add_argument("--roberta_model", default="roberta-base",
+                            help="roberta model pretrained")
 
         self.parser.add_argument("--max_len", type=int, default=128)
 
@@ -27,7 +30,7 @@ class BaseConfig:
         self.parser.add_argument("--valid_batch_size", type=int, default=16)
         self.parser.add_argument("--test_batch_size", type=int, default=16)
 
-        self.parser.add_argument("--num_epochs", type=int, default=60)
+        self.parser.add_argument("--num_epochs", type=int, default=20)
         self.parser.add_argument("--lr", type=int, default=2e-5)
 
     def add_path(self) -> None:

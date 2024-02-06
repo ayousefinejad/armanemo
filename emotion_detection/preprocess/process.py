@@ -130,9 +130,9 @@ def preprocess_ArmanEmo(df):
       tmp_text = my_normalizer.normalize(text)
       return tmp_text
     df.text = df.text.apply(process_text)
-    df.dropna(axis=0, inplace=True)
-    df.to_csv('data/train_process.csv', index=False)
-    return df
+    cleaned_df = df.dropna()
+    cleaned_df.to_csv('data/train_process.csv', index=False)
+    return cleaned_df
 
 def tfidf_vectorizer(X_train, X_test):
     vectorizer = TfidfVectorizer(max_features=5000)
