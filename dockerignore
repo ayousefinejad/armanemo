@@ -1,0 +1,4 @@
+.git
+/assets/saved_models/merat/*
+/assets/finetuned_models/xlm_roberta_large_online_negative_sampling/*
+/assets/finetuned_models/lm/*

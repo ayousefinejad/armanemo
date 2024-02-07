@@ -1,0 +1,56 @@
+2024-02-06 20:41:26,241 - INFO - 
+ Random Forest model 
+2024-02-06 20:41:27,829 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 20:41:27,829 - INFO - 
+ SVM model 
+2024-02-06 20:41:47,544 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 20:41:47,545 - INFO - 
+ CatBoost model 
+2024-02-06 20:42:43,675 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 20:47:13,726 - INFO - 
+ Random Forest model 
+2024-02-06 20:47:15,365 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 20:47:15,365 - INFO - 
+ SVM model 
+2024-02-06 20:47:34,769 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 20:47:34,769 - INFO - 
+ CatBoost model 
+2024-02-06 20:48:30,397 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 21:05:26,015 - INFO - 
+ Random Forest model 
+2024-02-06 21:05:27,586 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 21:05:27,586 - INFO - 
+ SVM model 
+2024-02-06 21:05:47,440 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 21:05:47,442 - INFO - 
+ CatBoost model 
+2024-02-06 21:06:43,569 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 21:08:32,558 - INFO - 
+ Random Forest model 
+2024-02-06 21:08:34,185 - INFO - accuracy RandomForestClassifier: 0.5608163265306122
+2024-02-06 21:08:34,185 - INFO - 
+ SVM model 
+2024-02-06 21:08:54,140 - INFO - accuracy SVC: 0.5404081632653062
+2024-02-06 21:08:54,140 - INFO - 
+ CatBoost model 
+2024-02-06 21:09:53,335 - INFO - accuracy CatBoostClassifier: 0.5730612244897959
+2024-02-06 21:20:21,758 - INFO - 
+ Random Forest model 
+2024-02-06 21:21:41,597 - INFO - Best Parameters: {'criterion': 'gini', 'min_samples_split': 2, 'n_estimators': 100}
+2024-02-06 21:21:56,193 - INFO - Cross-validation results for Random Forest
+2024-02-06 21:21:56,194 - INFO - Mean Accuracy: 0.5451416885772714
+2024-02-06 21:21:56,194 - INFO - Mean Precision: 0.625816871389153
+2024-02-06 21:21:56,194 - INFO - Mean Recall: 0.509041863515702
+2024-02-06 21:21:56,194 - INFO - Mean F1: 0.5273210992006387
+2024-02-06 21:21:56,194 - INFO - 
+ SVM model 
+2024-02-06 22:41:07,633 - INFO - PyTorch version 2.1.2 available.
+2024-02-06 22:42:52,521 - INFO - PyTorch version 2.1.2 available.
+2024-02-06 22:44:18,343 - INFO - PyTorch version 2.1.2 available.
+2024-02-06 22:46:04,486 - WARNING - Error while downloading from https://cdn-lfs.huggingface.co/HooshvareLab/bert-fa-base-uncased/4e0276452d76633de56e2eedc35d39f3dfe8d3038a2a192877787ae83105726e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1707506062&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNzUwNjA2Mn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9Ib29zaHZhcmVMYWIvYmVydC1mYS1iYXNlLXVuY2FzZWQvNGUwMjc2NDUyZDc2NjMzZGU1NmUyZWVkYzM1ZDM5ZjNkZmU4ZDMwMzhhMmExOTI4Nzc3ODdhZTgzMTA1NzI2ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=0PmdDub40pF%7EOuK36unpGG4zaYUWn6q9nUm5WhOSw3dmqrTdX2AyWSgMhhGI0YD9Dy4GU6xhFqTN%7EnMY878W7U0MA3iv2h8S6E9lUVhZfRR6br2dRNpZXviC2J7dEr4xeFWpFodKW8PvhZKIjLgA1bQkHAH32dzuagTX2JbrnSncw79gC4VTk15do6nnj6kcggSWgHHmdjBvvIZvekvjwx3UUul9RqYoU7IcM%7EXeJFy%7Epkxf-V79-KhsYdAxnUrLbSIlV6zkOd0%7E3UPXYChhGPhRx5mx5d2xWb0-sPyfJPXtH6p0oxy8xgJWY7WuyR7FuqPrRnKPDPSsQZRg-Lld6A__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+2024-02-06 22:46:31,226 - INFO - PyTorch version 2.1.2 available.
+2024-02-06 22:50:57,058 - INFO - PyTorch version 2.1.2 available.
+2024-02-06 22:51:27,885 - INFO - PyTorch version 2.1.2 available.
+2024-02-06 22:51:54,029 - WARNING - Error while downloading from https://cdn-lfs.huggingface.co/HooshvareLab/bert-fa-base-uncased/4e0276452d76633de56e2eedc35d39f3dfe8d3038a2a192877787ae83105726e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1707506494&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNzUwNjQ5NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9Ib29zaHZhcmVMYWIvYmVydC1mYS1iYXNlLXVuY2FzZWQvNGUwMjc2NDUyZDc2NjMzZGU1NmUyZWVkYzM1ZDM5ZjNkZmU4ZDMwMzhhMmExOTI4Nzc3ODdhZTgzMTA1NzI2ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=t%7EMppcsFe7b6ndvkk4KmXgQL1JU%7EusJnqemXZpSVpzJ2BBeFfawltC9t%7EqyVTGTUAlyFWAuJi01h5GOIZkM6JsGIeLOBIcTgBJdey6JID%7EfUpix-bfrtg2EC7YfOnsLkjRFxcndEZengTD9pHqAAAzRywyrJVS9XY4uKoQ%7Eh4BGZIoLx5%7EUPPW6VGv8I4REos2RffuzcuMWq97hFcfku7qLaIGo5LJ6K3wzzkr4tQplE%7EpP7X6kisCG2e06uJKTh3OFLcwnPIjhrRn2lvkNbXwEpDHBgUrnEIktJ6KGpdjXrdIxTfVSo4oLYksP9vpQENK9kqQoOWRlZqNLdVvuGeQ__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
