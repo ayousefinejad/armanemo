@@ -2,6 +2,22 @@ import torch
 import torch.nn as nn
 import time
 
+class LinearTextClassifier(nn.Module):
+    def __init__(self, vocab_size, embedding_dim, output_dim, dropout, pad_idx):
+        super().__init__()
+
+        self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=pad_idx)
+        self.fc = nn.Linear(embedding_dim, output_dim)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, text):
+        # text = [batch size, sent len]
+        embedded = self.dropout(self.embedding(text))
+        # embedded = [batch size, sent len, emb dim]
+        embedded_mean = embedded.mean(dim=1)  # Taking the mean of embeddings across the sentence length
+        # embedded_mean = [batch size, emb dim]
+        return self.fc(embedded_mean)
+
 
 class TextClassificationLinear(nn.Module):
     def __init__(self, vocab_size, embed_dim, num_class):
